@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React , { useState }from 'react';
 import './App.css';
+import {HexText} from './controls/HexText';
+import HSLslider from './controls/HSLslider';
+import RGBslider from './controls/RGBslider';
 
 function App() {
+  const [toggle, setToggle] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ColorPicker">
+      <HexText />
+      <div className="ColorPicker_history"></div>
+      <label className="ColorPicker_toggle">
+        <span>rgb</span>
+        <input type="checkbox" onChange={e => setToggle(e.target.checked)}/>
+        <div className="checkboxToggle">
+          <div className="checkboxToggle_dial" style={{backgroundColor: '#000'}}/>
+        </div>
+        <span>hsl</span>
+      </label>
+      <div className="ColorPicker_sliders">
+        {toggle?
+          (<HSLslider />)
+          :
+          (<RGBslider />)
+        }
+      </div>
     </div>
   );
 }
