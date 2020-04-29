@@ -1,5 +1,4 @@
 import convert from 'color-convert';
-import {RGB, HSL, LAB, ColorBlock, reObjType, ConvertArr} from './colorTyped';
 
 function reObj (val : number[], objKeys : string[]) : {} | void {
   if (val.length !== objKeys.length) return undefined;

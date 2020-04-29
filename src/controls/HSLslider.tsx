@@ -1,6 +1,5 @@
 import React, { ChangeEvent } from 'react';
-import { useStore, Action } from '../useStore';
-import { ColorBlock } from '../models/colorTyped';
+import { useStore } from '../useStore';
 import { backgroundSL } from '../utils';
 
 const HSLslider = () => {

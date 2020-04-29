@@ -1,4 +1,3 @@
-import { RGB, HSL } from "./models/colorTyped";
 import convert from 'color-convert';
 
 

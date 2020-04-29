@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import {StoreProvider} from './useStore';
 import { storeReducer } from './storeReducer';
-import { ColorBlock } from './models/colorTyped';
 import { Color } from './models/color';
 import {useColorPicker} from './useColorPicker';
 
