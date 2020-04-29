@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useStore, Action } from '../useStore';
+import { useStore } from '../useStore';
 
 function checkHex(value:string) {
   const regMatch = /^([0-9A-F]{3}){1,2}$/i;
